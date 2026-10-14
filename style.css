@@ -1,0 +1,44 @@
+* {
+  margin: 0 7px;
+}
+#waybar {
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+
+#workspaces button {
+    color: rgba(170,170,170, 1);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-size: 15px;
+    margin: 0 0px;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 18px;
+}
+#workspaces button.hover {
+    background-color: #ffffff;
+}
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+#cpu, #temperature, #disk, #battery, #pulseaudio, #idle_inhibitor {
+    padding: 0 5px;   /* Internal padding */
+    margin: 0 10px;   /* Increase this number (e.g., from 4px to 12px) to push them apart */
+}
+
+#waybar {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 3px solid #aaaaaa; 
+    
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+

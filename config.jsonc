@@ -1,0 +1,164 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+
+
+
+
+
+
+
+
+
+  "modules-left": [
+    "clock",
+    "pulseaudio",
+    "battery",
+    "custom/fan-speed",
+    "tray"
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces",
+    "niri/workspaces"
+  ],
+
+  "modules-right": [
+    "network",
+    "idle_inhibitor",
+    "power-profiles-daemon",
+    "cpu",
+    "temperature",
+    "disk"
+  ],
+
+
+
+
+
+
+
+
+
+
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%I:%M:%S %p %a, %b %d}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "battery": {
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "format": "{capacity}% {icon}",
+      "format-charging": "{capacity}% {icon}",
+      "format-plugged": "{capacity}% ",
+      "format-icons": {
+              "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+              "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+      }
+  },
+
+  "pulseaudio": {
+      "format": "{volume}% {icon}",
+      "format-bluetooth": "{volume}% {icon}󰂯",
+      "format-muted": "mute 󰖁",
+      "format-icons": {
+          "headphone": "󰋋",
+          "default": ["󰖁", "󰕿", "󰕿", "󰕿", "󰖀", "󰖀", "󰖀", "󰕾", "󰕾", "󰕾"]
+      },
+      "on-click": "pavucontrol"
+  },
+
+
+
+
+
+
+
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "power-profiles-daemon": {
+    "format": " {icon} ",
+    "tooltip-format": "Power Profile: {profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": "{usage}% "
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C ",
+  },
+
+  "disk": {
+    "interval": 30,
+    "format": "{percentage_used}% ",
+    "path": "/"
+  },
+  
+  "idle_inhibitor": {
+      "format": " {icon} ",
+      "format-icons": {
+          "activated": "󰛊",  // Eye open icon when inhibiting sleep
+          "deactivated": "󰾫" // Eye closed/slashed icon when sleep is allowed
+      }
+  },
+  "network": {
+      "format-wifi": "{essid:.15} ",
+      "format-ethernet": "Connected   ",
+      "format-disconnected": "Disconnected   ",
+      "tooltip-format": "{ifname} via {gwaddr}   ",
+      "tooltip-format-wifi": "{essid} ({signaldBm}dBm) ",
+      "tooltip-format-ethernet": "{ifname}   ",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "nmgui"
+  },
+  "custom/fan-speed": {
+      "exec": "sensors | awk '/fan1:/ {print $2}'",
+      "interval": 1,
+      "format": "{} 󰈐"
+  }
+}
+
+
+
+

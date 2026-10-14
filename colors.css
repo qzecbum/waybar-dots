@@ -1,0 +1,22 @@
+/* Themed using Wallust :L */
+
+@define-color background #191919;
+@define-color foreground #B2C8D6;
+
+@define-color black #43464B;
+@define-color red #FF355B;
+@define-color green #B6E875;
+@define-color yellow #FFC150;
+@define-color blue #75D3FF;
+@define-color magenta #B975E6;
+@define-color cyan #6CBEB5;
+@define-color white #C1C8D6;
+
+@define-color bright_black #43464B;
+@define-color bright_red #FF355B;
+@define-color bright_green #B6E875;
+@define-color bright_yellow #FFC150;
+@define-color bright_blue #75D4FF;
+@define-color bright_magenta #B975E6;
+@define-color bright_cyan #6CBEB5;
+@define-color bright_white #C1C8D6;
